@@ -14,7 +14,9 @@ const Todo = {
 
 // CREATE
 /**
- * createTodo: Todo item 을 새로 생성한다.
+ * createTodo:
+ * 할 일을 추가할 수 있다.
+ * 내용없이 추가할 수 없다.
  *
  * @param {string} content 내용
  * @param {string} category 카테고리
@@ -29,19 +31,23 @@ const createTodo = (content, category, tags) => {
 
 // READ
 /**
- * readTodo: 특정 Todo item 을 불러온다.
+ * readTodo:
+ * 모든 할 일을 조회할 수 있다.
+ * ID를 기반으로 특정 할 일을 조회할 수 있다.
  *
- * @param { number } id todo id
+ * @param { number } [id] todo id
  *
- * @return { Todo } id 를 통해 찾은 todo 를 반환합니다.
+ * @return { Todo, Todo[] } id 를 통해 찾은 todo 혹은 모든 todos 를 반환합니다.
  */
-const readTodo = () => {
+const readTodo = (id) => {
   // TODO: add logic to read todo
 };
 
 // UPDATE
 /**
- * updateTodo: 특정 Todo item 의 정보를 업데이트합니다.
+ * updateTodo:
+ * id 를 제외한 모든 속성을 수정할 수 있다.
+ * 특정 할 일의 특정 태그를 수정할 수 있다.
  *
  * @param {number} id todo id
  * @param {string} content 내용
@@ -51,18 +57,22 @@ const readTodo = () => {
  *
  * @return { boolean } update 성공 여부
  */
-const updateTodo = () => {
+const updateTodo = (id, content, completed, category, tags) => {
   // TODO: add logic to update todo
 };
 
 // DELETE
 /**
- * deleteTodo: 특정 Todo item 를 삭제합니다.
+ * deleteTodo:
+ * ID를 기반으로 특정 할 일을 삭제할 수 있다.
+ * 모든 할 일을 제거할 수 있다.
+ * 특정 할 일의 특정 태그를 삭제할 수 있다.
+ * 특정 할 일의 모든 태그를 제거할 수 있다.
  *
  * @param { number } id todo id
  *
  * @return { boolean } delete 성공 여부
  */
-const deleteTodo = () => {
+const deleteTodo = (id) => {
   // TODO: add logic to delete todo
 };
