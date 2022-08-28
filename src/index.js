@@ -37,7 +37,7 @@ const createTodo = (content, category, tags) => {
  *
  * @param { number } [id] todo id
  *
- * @return { Todo, Todo[] } id 를 통해 찾은 todo 혹은 모든 todos 를 반환합니다.
+ * @return { Todo[] } id 를 통해 찾은 todo 혹은 모든 todos 를 반환합니다.
  */
 const readTodo = (id) => {
   // TODO: add logic to read todo
@@ -69,10 +69,11 @@ const updateTodo = (id, content, completed, category, tags) => {
  * 특정 할 일의 특정 태그를 삭제할 수 있다.
  * 특정 할 일의 모든 태그를 제거할 수 있다.
  *
- * @param { number } id todo id
+ * @param { number } [id] todo id
+ * @param { string[] } [tags] 태그들
  *
  * @return { boolean } delete 성공 여부
  */
-const deleteTodo = (id) => {
+const deleteTodo = (id, tags) => {
   // TODO: add logic to delete todo
 };
